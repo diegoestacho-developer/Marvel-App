@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>{{ character.name }}</h2>
+<div mat-dialog-content>
+  {{ character.description ? character.description : 'Esse personagem não possui descrição...'}}
+
+  <mat-list>
+    <mat-list-item *ngFor="let comic of character.items">
+      <h3 matLine>{{comic.name}}</h3>
+      <p matLine>
+        <span class="demo-2">{{ comic.resourceURI }}</span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Fechar</button>
+</div>
